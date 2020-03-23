@@ -31,7 +31,7 @@ public class Produto {
 	private int qtdStoque;
 	
 	@ManyToOne
-	@JsonIgnoreProperties("produto")
+	@JsonIgnoreProperties("produtos")
 	private Categoria categoria;
 	
 	public Categoria getCategoria() {
