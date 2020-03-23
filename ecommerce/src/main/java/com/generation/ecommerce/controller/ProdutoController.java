@@ -50,5 +50,9 @@ public class ProdutoController {
 		return ResponseEntity.ok(repository.save(produto));
 	}
 	
+	@DeleteMapping("/{id}")
+	public void Delete(@PathVariable long id) {
+		repository.deleteById(id);
+	}
 	
 }
