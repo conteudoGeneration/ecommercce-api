@@ -24,36 +24,35 @@ public class CategoriaController {
 
 	@Autowired
 	private CategoriaRepository repository;
-	
+
 	@GetMapping
-	public ResponseEntity<List<Categoria>> GetAll(){
+	public ResponseEntity<List<Categoria>> GetAll() {
 		return ResponseEntity.ok(repository.findAll());
-	} 
-	
+	}
+
 	@GetMapping("/{id}")
-	public ResponseEntity<Categoria> GetById(@PathVariable long id){
-		return repository.findById(id).map(resp -> ResponseEntity.ok(resp))
-				.orElse(ResponseEntity.notFound().build());
+	public ResponseEntity<Categoria> GetById(@PathVariable long id) {
+		return repository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
 	}
 
 	@GetMapping("/nome/{nome}")
-	public ResponseEntity<List<Categoria>> GetByNome(@PathVariable String nome){
+	public ResponseEntity<List<Categoria>> GetByNome(@PathVariable String nome) {
 		return ResponseEntity.ok(repository.findAllByDescricaoContainingIgnoreCase(nome));
 	}
-	
+
 	@PostMapping
-	public ResponseEntity<Categoria> Post(@RequestBody Categoria categoria){
+	public ResponseEntity<Categoria> Post(@RequestBody Categoria categoria) {
 		return ResponseEntity.ok(repository.save(categoria));
 	}
-	
+
 	@PutMapping
-	public ResponseEntity<Categoria> Put(@RequestBody Categoria categoria){
+	public ResponseEntity<Categoria> Put(@RequestBody Categoria categoria) {
 		return ResponseEntity.ok(repository.save(categoria));
 	}
-	
+
 	@DeleteMapping("/{id}")
 	public void Delete(@PathVariable long id) {
 		repository.deleteById(id);
 	}
-	
+
 }
