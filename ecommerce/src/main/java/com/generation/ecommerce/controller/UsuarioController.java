@@ -24,7 +24,7 @@ import com.generation.ecommerce.service.UsuarioService;
 @RequestMapping("/usuarios")
 @CrossOrigin("*")
 public class UsuarioController {
-
+	
 	@Autowired
 	private UsuarioRepository repository;
 	

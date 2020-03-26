@@ -24,7 +24,7 @@ public class UsuarioLogin {
 
 	public boolean isVendedor() {
 		return vendedor;
-	}
+	}	
 
 	public void setVendedor(boolean vendedor) {
 		this.vendedor = vendedor;
@@ -41,7 +41,4 @@ public class UsuarioLogin {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	
-	
-
 }

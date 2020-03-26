@@ -27,6 +27,10 @@ public class Produto {
 	@Size(min = 5, max = 256)
 	private String nome;
 	
+	@NotNull
+	@Size(min = 5, max = 9999)
+	private String urlImagem;
+	
 	@Min(0)
 	private int qtdStoque;
 	
@@ -74,6 +78,14 @@ public class Produto {
 
 	public void setValor(BigDecimal valor) {
 		this.valor = valor;
+	}
+
+	public String getUrlImagem() {
+		return urlImagem;
+	}
+
+	public void setUrlImagem(String urlImagem) {
+		this.urlImagem = urlImagem;
 	}
 	
 }
