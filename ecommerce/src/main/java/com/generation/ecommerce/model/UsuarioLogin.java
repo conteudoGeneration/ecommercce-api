@@ -2,6 +2,8 @@ package com.generation.ecommerce.model;
 
 public class UsuarioLogin {
 	
+	private String nome;
+	
 	private String usuario;
 	
 	private String senha;
@@ -9,6 +11,15 @@ public class UsuarioLogin {
 	private String token;
 	
 	private boolean vendedor;
+
+	
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
 	public String getUsuario() {
 		return usuario;
